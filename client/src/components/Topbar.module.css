@@ -1,0 +1,11 @@
+.bar { background: var(--bg2); border-bottom: 1px solid var(--border); height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+.logo { font-size: 20px; font-weight: 900; letter-spacing: -1px; color: var(--accent); display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: blink 2.4s ease-in-out infinite; }
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+.right { display: flex; align-items: center; gap: 10px; }
+.adminLink { font-size: 13px; font-weight: 700; color: var(--amber); padding: 6px 12px; border-radius: 8px; border: 1.5px solid rgba(245,166,35,.3); background: rgba(245,166,35,.08); text-decoration: none; transition: all .15s; }
+.adminLink:hover { background: rgba(245,166,35,.18); }
+.chip { display: flex; align-items: center; gap: 8px; padding: 6px 12px 6px 8px; border-radius: 30px; background: var(--bg3); border: 1.5px solid var(--border2); font-size: 13px; font-weight: 600; }
+.adminBadge { font-size: 10px; padding: 2px 7px; border-radius: 10px; background: rgba(245,166,35,.15); color: var(--amber); font-weight: 700; }
+.signout { font-size: 12px; padding: 6px 13px; border-radius: 8px; border: 1.5px solid var(--border2); color: var(--text2); transition: all .15s; }
+.signout:hover { background: var(--bg3); color: var(--text); }

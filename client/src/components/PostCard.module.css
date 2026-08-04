@@ -1,0 +1,86 @@
+/* client/src/components/PostCard.module.css */
+.card {
+  background:    var(--bg2);
+  border:        1.5px solid var(--border);
+  border-radius: var(--rL);
+  padding:       16px 18px;
+  margin-bottom: 13px;
+  transition:    border-color .2s;
+}
+.card:hover { border-color: var(--border2); }
+.card.hot   { border-color: rgba(124,104,250,.4); }
+
+.head {
+  display:     flex;
+  align-items: flex-start;
+  gap:         10px;
+  margin-bottom: 11px;
+}
+.meta  { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.name  { font-size: 14px; font-weight: 700; }
+.handle{ font-size: 12px; color: var(--text3); }
+.time  { font-size: 12px; color: var(--text3); flex-shrink: 0; }
+
+.badge { font-size: 10px; padding: 2px 8px; border-radius: 20px; font-weight: 700; letter-spacing: .3px; }
+.you   { background: var(--accent-bg);            color: var(--accent); }
+.hot   { background: rgba(245,166,35,.1);         color: var(--amber); }
+.mod   { background: rgba(241,106,106,.1);        color: var(--red); }
+
+.body {
+  font-size:    15px;
+  line-height:  1.7;
+  color:        var(--text);
+  margin-bottom: 13px;
+  word-break:   break-word;
+  white-space:  pre-wrap;
+}
+.htag { color: var(--accent); cursor: pointer; }
+.htag:hover { text-decoration: underline; }
+
+.foot { display: flex; align-items: center; gap: 2px; }
+.act  {
+  display:     inline-flex;
+  align-items: center;
+  gap:         5px;
+  padding:     6px 10px;
+  border-radius: 8px;
+  font-size:   13px;
+  color:       var(--text3);
+  cursor:      pointer;
+  transition:  all .15s;
+  user-select: none;
+}
+.act:hover  { background: var(--bg3); color: var(--text2); }
+.liked      { color: var(--red) !important; }
+
+/* Dropdown */
+.dd   { position: relative; }
+.menu {
+  position:  absolute;
+  right:     0;
+  top:       36px;
+  background: var(--bg3);
+  border:    1.5px solid var(--border2);
+  border-radius: var(--r);
+  min-width: 165px;
+  z-index:   60;
+  overflow:  hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,.5);
+  animation: fadeIn .13s ease;
+}
+@keyframes fadeIn { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
+.item {
+  display:     flex;
+  align-items: center;
+  gap:         9px;
+  padding:     9px 14px;
+  font-size:   13px;
+  color:       var(--text2);
+  cursor:      pointer;
+  width:       100%;
+  transition:  background .12s;
+  text-align:  left;
+}
+.item:hover         { background: var(--bg4); color: var(--text); }
+.danger             { color: var(--red); }
+.danger:hover       { background: rgba(241,106,106,.08); }

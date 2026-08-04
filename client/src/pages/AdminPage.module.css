@@ -1,0 +1,90 @@
+/* AdminPage.module.css */
+.page    { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+.header  { margin-bottom: 20px; }
+.title   { font-size: 22px; font-weight: 800; color: var(--text); }
+.sub     { font-size: 13px; color: var(--text3); margin-top: 3px; }
+
+.statsRow { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 24px; }
+.statCard { background: var(--bg2); border: 1.5px solid var(--border); border-radius: var(--rL); padding: 16px; text-align: center; }
+.statVal  { font-size: 28px; font-weight: 800; }
+.statLabel{ font-size: 11px; color: var(--text3); margin-top: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+
+.tabs    { display: flex; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.tab     { padding: 10px 20px; font-size: 13px; font-weight: 700; color: var(--text3); border-bottom: 2.5px solid transparent; cursor: pointer; transition: all .15s; display: flex; align-items: center; gap: 6px; background: none; }
+.tab:hover { color: var(--text2); }
+.tab.on    { color: var(--accent); border-bottom-color: var(--accent); }
+.badge     { background: var(--red); color: #fff; font-size: 10px; padding: 1px 6px; border-radius: 10px; font-weight: 800; }
+
+/* Reports */
+.reportCard { background: var(--bg2); border: 1.5px solid var(--border); border-radius: var(--rL); padding: 16px 18px; margin-bottom: 14px; }
+.reportCard.urgent { border-color: rgba(241,106,106,.5); background: rgba(241,106,106,.02); }
+.reportHead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+.reportMeta { display: flex; align-items: center; gap: 10px; }
+.reportCount{ font-size: 13px; font-weight: 700; color: var(--red); background: rgba(241,106,106,.1); padding: 3px 10px; border-radius: 20px; }
+.postAuthor { font-size: 13px; color: var(--text2); }
+.reportActions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btnDismiss { padding: 6px 13px; border-radius: 8px; font-size: 12px; font-weight: 700; background: rgba(61,214,140,.1); color: var(--green); border: 1.5px solid rgba(61,214,140,.3); cursor: pointer; transition: all .15s; }
+.btnDismiss:hover { background: rgba(61,214,140,.2); }
+.btnDelete  { padding: 6px 13px; border-radius: 8px; font-size: 12px; font-weight: 700; background: rgba(241,106,106,.1); color: var(--red); border: 1.5px solid rgba(241,106,106,.3); cursor: pointer; transition: all .15s; }
+.btnDelete:hover { background: rgba(241,106,106,.2); }
+.postBody    { font-size: 14px; color: var(--text); background: var(--bg3); border-radius: 8px; padding: 10px 13px; margin-bottom: 12px; line-height: 1.6; border: 1px solid var(--border); }
+.reportersTitle { font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: .7px; margin-bottom: 8px; }
+.reportersList  { display: flex; flex-direction: column; gap: 6px; }
+.reporter  { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: var(--bg3); border-radius: 8px; flex-wrap: wrap; }
+.reason    { font-size: 11px; color: var(--text3); background: var(--bg4); padding: 2px 8px; border-radius: 10px; }
+.repTime   { font-size: 11px; color: var(--text3); margin-left: auto; }
+
+/* Users */
+.searchWrap  { margin-bottom: 14px; }
+.searchInput { background: var(--bg3); border: 1.5px solid var(--border2); border-radius: var(--r); padding: 10px 14px; color: var(--text); font-size: 13px; width: 100%; outline: none; }
+.searchInput:focus { border-color: var(--accent); }
+.userList    { display: flex; flex-direction: column; gap: 10px; }
+.userCard    { background: var(--bg2); border: 1.5px solid var(--border); border-radius: var(--rL); padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; transition: border-color .2s; }
+.userCard.blockedCard { border-color: rgba(241,106,106,.35); background: rgba(241,106,106,.02); }
+.userLeft    { display: flex; align-items: center; gap: 10px; }
+.userName    { font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.userSub     { font-size: 12px; color: var(--text3); margin-top: 2px; }
+.hasQ        { color: var(--green); }
+.adminTag      { font-size: 10px; padding: 2px 7px; border-radius: 10px; background: rgba(245,166,35,.15);  color: var(--amber);  font-weight: 700; }
+.blockedTag    { font-size: 10px; padding: 2px 7px; border-radius: 10px; background: rgba(241,106,106,.15); color: var(--red);    font-weight: 700; }
+.restrictedTag { font-size: 10px; padding: 2px 7px; border-radius: 10px; background: rgba(124,104,250,.15); color: var(--accent); font-weight: 700; }
+.tempTag       { font-size: 10px; padding: 2px 7px; border-radius: 10px; background: rgba(245,166,35,.1);  color: var(--amber);  font-weight: 700; }
+.userActions   { display: flex; gap: 7px; flex-wrap: wrap; }
+.actionBtn     { padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; transition: all .15s; border: 1.5px solid; }
+.btnBlock    { background: rgba(241,106,106,.1); color: var(--red);    border-color: rgba(241,106,106,.3); }
+.btnBlock:hover    { background: rgba(241,106,106,.2); }
+.btnUnblock  { background: rgba(61,214,140,.1);  color: var(--green);  border-color: rgba(61,214,140,.3); }
+.btnUnblock:hover  { background: rgba(61,214,140,.2); }
+.btnRevoke   { background: rgba(245,166,35,.1);  color: var(--amber);  border-color: rgba(245,166,35,.3); }
+.btnRevoke:hover   { background: rgba(245,166,35,.2); }
+.btnAllow    { background: rgba(124,104,250,.1); color: var(--accent); border-color: rgba(124,104,250,.3); }
+.btnAllow:hover    { background: rgba(124,104,250,.2); }
+.btnReset    { background: rgba(96,165,250,.1);  color: #60a5fa;       border-color: rgba(96,165,250,.3); }
+.btnReset:hover    { background: rgba(96,165,250,.2); }
+.adminProtected { font-size: 12px; color: var(--text3); font-style: italic; }
+
+/* Reset Modal */
+.modalOverlay { position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px); }
+.modal        { background: var(--bg2); border: 1.5px solid var(--border2); border-radius: var(--rXL); padding: 28px 26px; width: 100%; max-width: 420px; position: relative; animation: popIn .18s ease; }
+@keyframes popIn { from { transform: scale(.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.modalClose   { position: absolute; top: 14px; right: 14px; width: 28px; height: 28px; border-radius: 6px; background: var(--bg3); color: var(--text2); font-size: 14px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid var(--border); }
+.modalClose:hover { background: var(--bg4); }
+.modalTitle   { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+.modalSub     { font-size: 14px; color: var(--text2); margin-bottom: 16px; }
+.modalInfo    { font-size: 13px; color: var(--text2); background: var(--bg3); border-radius: var(--r); padding: 10px 13px; margin-bottom: 16px; line-height: 1.55; border: 1px solid var(--border); }
+.modalLabel   { display: block; font-size: 11px; font-weight: 700; color: var(--text2); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 6px; }
+.modalInput   { width: 100%; background: var(--bg3); border: 1.5px solid var(--border2); border-radius: var(--r); padding: 10px 14px; color: var(--text); font-size: 14px; outline: none; }
+.modalInput:focus { border-color: var(--accent); }
+.modalBtn     { width: 100%; padding: 11px; border-radius: var(--r); background: var(--accent); color: #fff; font-size: 14px; font-weight: 700; margin-top: 14px; cursor: pointer; transition: all .15s; }
+.modalBtn:hover    { background: var(--accent-d); }
+.modalBtn:disabled { opacity: .4; cursor: not-allowed; }
+.successBox   { background: rgba(61,214,140,.07); border: 1.5px solid rgba(61,214,140,.3); border-radius: var(--r); padding: 14px 16px; margin-bottom: 4px; }
+.tempPwDisplay{ font-family: monospace; font-size: 22px; font-weight: 800; letter-spacing: 3px; color: var(--text); background: var(--bg4); border-radius: 8px; padding: 10px; text-align: center; border: 1px solid var(--border2); margin: 8px 0; }
+
+.loading { text-align: center; padding: 30px; color: var(--text3); font-size: 14px; }
+.empty   { text-align: center; padding: 40px; color: var(--text3); }
+
+@media (max-width: 680px) {
+  .statsRow { grid-template-columns: repeat(2,1fr); }
+  .reportHead, .userCard { flex-direction: column; align-items: flex-start; }
+}

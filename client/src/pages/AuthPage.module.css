@@ -1,0 +1,67 @@
+/* client/src/pages/AuthPage.module.css */
+.wrap {
+  min-height: 100vh;
+  display:    flex;
+  align-items: center;
+  justify-content: center;
+  padding:    20px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(124,104,250,.08) 0%, transparent 60%);
+}
+.card {
+  background:    var(--bg2);
+  border:        1.5px solid var(--border2);
+  border-radius: var(--rXL);
+  padding:       36px 32px;
+  width:         100%;
+  max-width:     410px;
+  box-shadow:    0 24px 60px rgba(0,0,0,.5);
+}
+.brand      { text-align: center; margin-bottom: 24px; }
+.logo       { font-size: 32px; font-weight: 900; letter-spacing: -1.5px; color: var(--accent); }
+.tagline    { font-size: 13px; color: var(--text3); margin-top: 4px; }
+
+.seg        { display: flex; background: var(--bg3); border-radius: var(--r); padding: 4px; gap: 4px; margin-bottom: 22px; }
+.segBtn     { flex: 1; padding: 9px; border-radius: 8px; font-size: 14px; font-weight: 700; color: var(--text3); transition: all .18s; cursor: pointer; }
+.segBtn.on  { background: var(--accent); color: #fff; box-shadow: 0 2px 12px rgba(124,104,250,.35); }
+
+.field      { margin-bottom: 16px; }
+.label      { display: block; font-size: 11px; font-weight: 700; color: var(--text2); letter-spacing: .6px; text-transform: uppercase; margin-bottom: 6px; }
+.err        { font-size: 12px; color: var(--red); margin-top: 5px; }
+.hint       { font-size: 12px; color: var(--text3); margin-top: 4px; }
+
+.prefixWrap { position: relative; }
+.prefix     { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); font-size: 14px; font-weight: 700; color: var(--text3); pointer-events: none; }
+.prefixWrap input { padding-left: 25px; }
+
+.pwWrap          { position: relative; }
+.pwWrap input    { padding-right: 58px; }
+.showBtn         { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-size: 11px; font-weight: 700; color: var(--text3); padding: 3px 6px; border-radius: 5px; }
+.showBtn:hover   { color: var(--text2); }
+
+.strBar          { height: 3px; background: var(--bg4); border-radius: 2px; margin-top: 7px; overflow: hidden; }
+.strFill         { height: 100%; border-radius: 2px; transition: width .3s, background .3s; }
+
+.submit {
+  width:         100%;
+  padding:       12px;
+  border-radius: var(--r);
+  background:    var(--accent);
+  color:         #fff;
+  font-size:     15px;
+  font-weight:   700;
+  transition:    all .18s;
+  margin-top:    4px;
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+}
+.submit:hover    { background: var(--accent-d); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124,104,250,.35); }
+.submit:disabled { opacity: .45; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.switch      { text-align: center; font-size: 13px; color: var(--text3); margin-top: 18px; }
+.switch span { color: var(--accent); cursor: pointer; font-weight: 600; }
+.switch span:hover { text-decoration: underline; }
+
+.privacy { margin-top: 18px; padding: 11px 13px; background: var(--bg3); border-radius: var(--r); border: 1px solid var(--border); font-size: 12px; color: var(--text3); }
+
+@media (max-width: 480px) { .card { padding: 26px 18px; } }
